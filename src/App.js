@@ -6,11 +6,11 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Routes>
-          <Route path="/react-project" element={<MainPage />}></Route>
-          <Route path="/react-project/login"  exact element={<LoginPage />} />
+          <Route path="/" element={<MainPage />}></Route>
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </BrowserRouter>
