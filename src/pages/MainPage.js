@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 class MainPage extends React.Component {
   state = {
@@ -10,7 +11,10 @@ class MainPage extends React.Component {
     return (
       <>
         <div>
-            <p>메인 페이지입니다.</p> 
+                <h3>메인 페이지입니다.</h3> 
+                <ul>
+                    <Link to="/login"><li>링크 로그인 페이지</li></Link>
+			    </ul>
         </div>
       </>
     );

@@ -9,8 +9,8 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Routes>
-          <Route path="/" element={<MainPage />}></Route>
-          <Route path="/login" element={<LoginPage />}></Route>
+          <Route exact path="/" element={<MainPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </BrowserRouter>

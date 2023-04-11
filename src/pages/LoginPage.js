@@ -10,7 +10,7 @@ class LoginPage extends React.Component {
     return (
       <>
         <div>
-            <p>로그인 페이지입니다.</p> 
+            <h3>로그인 페이지입니다.</h3> 
         </div>
       </>
     );
