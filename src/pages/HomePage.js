@@ -4,6 +4,7 @@ import moment from 'moment';
 
 import ToDoList from "../components/home/ToDoList";
 import Weather from "../components/home/Weather";
+import "../styles/HomePage.scss";
 
 const HomePage = props => {
   const [nowTime, setNowTime] = useState(moment().format("HH : mm : ss"));
@@ -13,15 +14,11 @@ const HomePage = props => {
   }, []);
 
   const dateBuilder = (d) => {
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    let days = ["Sun", "Mon", "Tue", "Wed", "Tur", "Fir", "Sat"];
-
-    let year = d.year();
-    let month = months[d.month()];
-    let date = d.date();
+    let days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    let month = d.month() + 1;
     let day = days[d.days()];
 
-    return `${day} ${date} ${month} ${year}`;
+    return `${d.year()}년 ${month}월 ${d.date()}일 ${day}`;
   }
 
   const getTime = () => {
@@ -30,24 +27,19 @@ const HomePage = props => {
     const minutes = time.minutes();
     const seconds = time.seconds();
     
-    setNowTime(`${hours < 10 ? `0${hours}` : hours} : ${minutes < 10 ? `0${minutes}` : minutes} : ${seconds < 10 ? `0${seconds}` : seconds}`);
+    setNowTime(`${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`);
   }
 
   return (
-    <>
-      <div>
-        <h1>to do list</h1>
-        <h3>{ dateBuilder(moment()) }</h3>
-        <div className="js_clock">
-          <h2 className="clock_tit">{ nowTime }</h2>
+    <div className="wrap">
+      <div className="inner">
+        <h1 className="title">to do list</h1>
+        <div className="contents">
+          <ToDoList dateBuilder={dateBuilder} nowDate={moment()} nowTime={nowTime} />
+          <Weather />
         </div>
-        <ToDoList />
       </div>
-      <Weather />
-      {/* <ul>
-        <Link to="/login"><li>링크 로그인 페이지</li></Link>
-      </ul> */}
-    </>
+    </div>
   );
 }
 

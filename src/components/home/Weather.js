@@ -23,8 +23,6 @@ const Weather = props => {
         icon: data.weather[0].icon
       })
       // console.log(JSON.stringify(data, null, 4))
-  document.cookie = "crossCookie=bar; SameSite=None; Secure";
-
     })
   }, [url])
 
@@ -38,17 +36,15 @@ const Weather = props => {
   }
 
   return (
-    <div className="js_weather">
-      <h3> Today's { weather.city } weather...</h3>
-      <p>
-        오늘의 날씨:&nbsp;<img src={(`http://openweathermap.org/img/w/${weather.icon}.png`)} alt="weather_icon" />{weather.main}
-      </p>
-      <p>
-        &#128167; 현재습도:&nbsp;{weather.humidity}
-      </p>
-      <p>
-          &#127773; 현재기온:&nbsp;{weather.temp}℃
-      </p>
+    <div className="weatherWrap">
+      <div className="content">
+        <strong className="tit">오늘의 {weather.city} 날씨는? {weather.main}</strong>
+        <img className="weatherImg" src={(`https://openweathermap.org/img/w/${weather.icon}.png`)} alt="weather_icon" />
+      </div>
+      <div className="content">
+        <span className="text">&#128167; 현재습도:  {weather.humidity}%</span>
+        <span className="text">&#127773; 현재기온:  {weather.temp}℃</span>
+      </div>
     </div>
   )
 }

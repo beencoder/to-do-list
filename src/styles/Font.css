@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "Acme";
+	src: url("../assets/fonts/Acme-Regular.ttf");
+}
+@font-face {
+	font-family: "NotoSansKR-Regular";
+	src: url("../assets/fonts/NotoSansKR-Regular.otf");
+}
+@font-face {
+	font-family: "NotoSansKR-Bold";
+	font-weight: bold;
+	src: url("../assets/fonts/NotoSansKR-Bold.otf");
+}

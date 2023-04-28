@@ -1,0 +1,36 @@
+$full: 100%;
+$text-gray: #6E7981;
+$size-primary: 1.4rem;
+$size-small: 1.2rem;
+$bg-title: #E0EFFE;
+$color-bg: #F9FFFF;
+$text-bold: "NotoSansKR-Bold";
+$color-title: #454D52;
+
+$tablet: 1024px;
+$mobile: 480px;
+$mobile-small: 375px;
+$mobile-x-small: 320px;
+
+@mixin mobile {
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+@mixin mobile-small {
+  @media (min-width: $mobile-small) and (max-width: $mobile){
+    @content;
+  }
+}
+@mixin mobile-x-small {
+  @media (min-width: $mobile-x-small) and (max-width: $mobile-small){
+    @content;
+  }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size){
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
