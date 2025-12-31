@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/to-do-list/static/css/main.ada134d5.css",
-    "main.js": "/to-do-list/static/js/main.d007c471.js",
+    "main.css": "/to-do-list/static/css/main.2200c3fd.css",
+    "main.js": "/to-do-list/static/js/main.a51dd859.js",
     "static/js/787.34d05ddd.chunk.js": "/to-do-list/static/js/787.34d05ddd.chunk.js",
     "static/media/NotoSansKR-Bold.otf": "/to-do-list/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/NotoSansKR-Regular.otf": "/to-do-list/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
     "static/media/Acme-Regular.ttf": "/to-do-list/static/media/Acme-Regular.f6db4c5c3282b4e95e85.ttf",
     "index.html": "/to-do-list/index.html",
-    "main.ada134d5.css.map": "/to-do-list/static/css/main.ada134d5.css.map",
-    "main.d007c471.js.map": "/to-do-list/static/js/main.d007c471.js.map",
+    "main.2200c3fd.css.map": "/to-do-list/static/css/main.2200c3fd.css.map",
+    "main.a51dd859.js.map": "/to-do-list/static/js/main.a51dd859.js.map",
     "787.34d05ddd.chunk.js.map": "/to-do-list/static/js/787.34d05ddd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ada134d5.css",
-    "static/js/main.d007c471.js"
+    "static/css/main.2200c3fd.css",
+    "static/js/main.a51dd859.js"
   ]
 }
